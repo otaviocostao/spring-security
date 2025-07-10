@@ -11,6 +11,7 @@ public class Role {
     @Column(name = "role_id", updatable = false, nullable = false)
     private Long roleId;
 
+    @Column(name = "role_name")
     private String roleName;
 
     public Long getRoleId() {

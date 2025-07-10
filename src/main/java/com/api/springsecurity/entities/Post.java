@@ -14,6 +14,8 @@ public class Post {
     @Column(name = "post_id", updatable = false, nullable = false)
     private Long postId;
 
+    @JoinColumn(name = "user_id")
+    @ManyToOne
     private User user;
 
     private String title;
