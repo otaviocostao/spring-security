@@ -1,5 +1,6 @@
 package com.api.springsecurity.entities;
 
+import com.api.springsecurity.enums.RoleValues;
 import jakarta.persistence.*;
 
 @Entity
@@ -28,5 +29,21 @@ public class Role {
 
     public void setRoleName(String roleName) {
         this.roleName = roleName;
+    }
+
+    public enum Values {
+
+        ADMIN(1L),
+        BASIC(2L);
+
+        long roleId;
+
+        Values(long roleId) {
+            this.roleId = roleId;
+        }
+
+        public long getRoleId() {
+            return roleId;
+        }
     }
 }
